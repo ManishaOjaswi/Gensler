@@ -39,7 +39,7 @@ export class AccordionComponent implements OnInit {
   toggle(category: any, i: number) {
     this.catogories.forEach((item: any) => {
       if (item.title === category.title) {
-        item.showSubCategories = true;
+        item.showSubCategories = !item.showSubCategories;
       } else {
         item.showSubCategories = false;
       }

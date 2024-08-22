@@ -1,15 +1,16 @@
 <div class="container">
     <div *ngFor="let category of catogories; let i=index">
-        <div class="accordion-header" (click)="toggle(category,i)">
-            <i *ngIf="!showBody" class="fa fa-plus-square-o"></i>
-            <i *ngIf="showBody" class="fa fa-minus-square-o"></i>
-            <div class="accordion-title"> {{category.title}}</div>
-        </div>
-
-        <div class="accordion-body" *ngIf="category.showSubCategories">
-            <div *ngFor="let subCategory of category.list">
-                <div> {{subCategory}}</div>
+            <div (click)="toggle(category,i)" class="accordion-header">
+                <i *ngIf="!category.showSubCategories" class="fa fa-plus-square-o"></i>
+                <i *ngIf="category.showSubCategories" class="fa fa-minus-square-o"></i>
+                <div class="accordion-title"> {{category.title}}</div>
             </div>
-        </div>
+
+            <div  *ngIf="category.showSubCategories">
+                <div *ngFor="let subCategory of category.list">
+                    <div class="accordion-body"> {{subCategory}}</div>
+                </div>
+            </div>
+  
     </div>
 </div>
