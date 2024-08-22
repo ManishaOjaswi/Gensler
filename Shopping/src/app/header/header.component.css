@@ -1,0 +1,21 @@
+.container{
+    display:flex;
+    justify-content: space-around;
+    background-color: rgb(156, 180, 215);
+    align-items: center;
+}
+
+.app-name{
+    background-color: rgb(255, 0, 217);
+    text-align: center;
+    flex-grow: 2;
+}
+
+.fa{
+    font-size:1.5rem;
+}
+
+
+
+
+   
