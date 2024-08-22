@@ -1,7 +1,10 @@
+
 .container{
+    display: inline-block;
     width: 20vw ;
     height: 80vh;    
     background-color: rgb(218, 196, 255);
+    position: fixed;
 }
 
 .accordion-header{

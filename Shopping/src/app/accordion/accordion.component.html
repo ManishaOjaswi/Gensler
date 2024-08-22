@@ -8,7 +8,7 @@
 
             <div  *ngIf="category.showSubCategories">
                 <div *ngFor="let subCategory of category.list">
-                    <div class="accordion-body"> {{subCategory}}</div>
+                    <div class="accordion-body" (click)="subCategorySelect(subCategory)"> {{subCategory}}</div>
                 </div>
             </div>
   
