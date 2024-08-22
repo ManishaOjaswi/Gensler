@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs';
+import { SelectedDataService } from '../services/selected-data.service';
 
 @Component({
   selector: 'app-accordion',
@@ -12,7 +12,8 @@ export class AccordionComponent implements OnInit {
   catogories: any = [];
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private selectedData: SelectedDataService
+  ) { }
 
   ngOnInit(): void {
     this.getCategories();
@@ -47,7 +48,8 @@ export class AccordionComponent implements OnInit {
   }
 
   subCategorySelect(categorySelected:String){
-    console.log(categorySelected);
+    console.log("categorySelected==",categorySelected);
+    
   }
 
 }

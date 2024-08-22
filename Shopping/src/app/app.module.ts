@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { provideHttpClient } from '@angular/common/http';
-import { SharedModule } from './shared/shared.module';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AccordionComponent,
+    ProductsListComponent,
+    ProductCardComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
