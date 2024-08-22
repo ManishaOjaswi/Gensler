@@ -7,14 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { provideHttpClient } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
-import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AccordionComponent,
-    BodyComponent,
     
   ],
   imports: [
