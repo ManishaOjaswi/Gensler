@@ -1,0 +1,30 @@
+.card-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px
+}
+
+.card{
+    width: 30%;
+    border: 1px solid black;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   
+}
+
+.card-title
+{
+   font-size: 1.2rem;
+   font-weight: 600;
+   padding: 5px;
+}
+
+.card-button{
+    width: 40%;
+   
+   
+}
+

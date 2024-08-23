@@ -47,9 +47,9 @@ export class AccordionComponent implements OnInit {
     })
   }
 
-  subCategorySelect(categorySelected:String){
+  subCategorySelect(categorySelected:string){
     console.log("categorySelected==",categorySelected);
-    
+    this.selectedData.setSelectedCategory(categorySelected);
   }
 
 }

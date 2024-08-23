@@ -14,7 +14,7 @@ export class SelectedDataService {
   }
 
   getSelecteddCategory() {
-    return this.categorySelected.asObservable;
+    return this.categorySelected.asObservable();
   }
 
 }
