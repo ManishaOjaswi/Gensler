@@ -7,16 +7,13 @@ import { SelectedDataService } from '../services/selected-data.service';
   styleUrl: './products-list.component.css'
 })
 export class ProductsListComponent implements OnInit {
-  categoryTitle: string ="Category";
+  categoryTitle: string = "Computer";
   constructor(private selectedData: SelectedDataService) { }
 
 
   ngOnInit(): void {
     this.selectedData.getSelecteddCategory().subscribe(res=>{
       this.categoryTitle = res;
-      console.log("value to next comp======",this.categoryTitle);
     })
   }
-
-
 }

@@ -1,37 +1,13 @@
-<div class="card-container">
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-title">Coding</div>
-        <div class="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus
-        </div>
-        <button class="card-button">Add to Cart</button>
-    </div>
 
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-title">Coding</div>
-        <div class="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus
+    <div class="row">
+        <div class="card col-3 mx-5 my-3 p-2" *ngFor="let item of selectedItemList?.itemList">
+            <div class="card-img-top"></div>
+            <div class="card-body">
+                <div class="card-title text-truncate" >{{item.itemName}}</div>
+                <div class="card-text">
+                    {{item.itemDescription}}
+                </div>
+                <button type="button" (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+            </div>
         </div>
-        <button class="card-button">Add to Cart</button>
     </div>
-
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-title">Coding</div>
-        <div class="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus
-        </div>
-        <button class="card-button">Add to Cart</button>
-    </div>
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-title">Coding</div>
-        <div class="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus
-        </div>
-        <button class="card-button">Add to Cart</button>
-    </div>
-    
-</div>

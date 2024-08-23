@@ -31,13 +31,17 @@ export class AccordionComponent implements OnInit {
               showSubCategories: false,
             }
          });
-        console.log("this.catogories==", this.catogories);
+        this.initialPage();
       });
+  }
 
+  initialPage(){
+    this.toggle(this.catogories[0]);
+    this.subCategorySelect(this.catogories[0].list[0]);
   }
 
 
-  toggle(category: any, i: number) {
+  toggle(category: any) {
     this.catogories.forEach((item: any) => {
       if (item.title === category.title) {
         item.showSubCategories = !item.showSubCategories;
@@ -47,8 +51,7 @@ export class AccordionComponent implements OnInit {
     })
   }
 
-  subCategorySelect(categorySelected:string){
-    console.log("categorySelected==",categorySelected);
+  subCategorySelect(categorySelected:string){   
     this.selectedData.setSelectedCategory(categorySelected);
   }
 

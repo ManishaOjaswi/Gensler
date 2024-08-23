@@ -5,7 +5,10 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SelectedDataService {
-  categorySelected = new BehaviorSubject<any>('');
+  categorySelected = new BehaviorSubject<any>('Sub Category');
+  cartData :any =[];
+  cartCount= new BehaviorSubject<any>(0);
+  cartProductDetails = new BehaviorSubject<any>("");
 
   constructor() { }
 
@@ -16,5 +19,23 @@ export class SelectedDataService {
   getSelecteddCategory() {
     return this.categorySelected.asObservable();
   }
+
+  addProductToCart(value:any){
+    this.cartData.push(value);
+    this.cartProductDetails.next(this.cartData);
+    this.cartCount.next(this.cartData.length);
+    
+  }
+
+  getCartDetails(){
+    return this.cartProductDetails.asObservable();
+  }
+
+  getCartCount(){
+    return this.cartCount.asObservable();
+  }
+
+
+
 
 }

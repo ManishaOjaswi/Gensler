@@ -1,4 +1,10 @@
-.container {
+.subCategory-header{
+    background-color: rgb(163, 166, 166);
+}
+
+
+
+/* .container {
     width: 75vw;
     height: 80vh;
     background-color: aqua;
@@ -11,4 +17,4 @@
     padding-bottom: 4px;
     background-color: brown;
     text-align: center;
-}
+} */

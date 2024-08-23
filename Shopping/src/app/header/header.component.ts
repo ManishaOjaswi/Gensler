@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SelectedDataService } from '../services/selected-data.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
+  productsCount?:number;
+
+constructor(private dataService:SelectedDataService){}
+
+  ngOnInit(): void {
+   this.dataService.getCartCount().subscribe((res:number)=>{
+    this.productsCount = res;
+   })
+  }
+ 
+
+
+
 
 }
