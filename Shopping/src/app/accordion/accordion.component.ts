@@ -19,7 +19,7 @@ export class AccordionComponent implements OnInit {
     this.getCategories();
   }
 
-  getCategories() {
+  getCategories() {  // service call for categories and sub catogories for accordian
     this.http.get("https://gensler-project-default-rtdb.firebaseio.com/categories.json")
       .subscribe((res: any) => {
         let catogoriesValue = res;
@@ -41,7 +41,7 @@ export class AccordionComponent implements OnInit {
   }
 
 
-  toggle(category: any) {
+  toggle(category: any) {  // to open the accordian
     this.catogories.forEach((item: any) => {
       if (item.title === category.title) {
         item.showSubCategories = !item.showSubCategories;

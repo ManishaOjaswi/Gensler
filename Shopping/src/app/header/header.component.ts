@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit{
 constructor(private dataService:SelectedDataService){}
 
   ngOnInit(): void {
-   this.dataService.getCartCount().subscribe((res:number)=>{
+   this.dataService.getCartCount().subscribe((res:number)=>{  // fetching the category the user has selected
     this.productsCount = res;
    })
   }
