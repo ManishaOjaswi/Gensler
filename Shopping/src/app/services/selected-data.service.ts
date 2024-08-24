@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SelectedDataService {
-  categorySelected = new BehaviorSubject<any>('Sub Category');
+  categorySelected = new BehaviorSubject<any>('Computer');
   cartData :any =[];
   cartCount= new BehaviorSubject<any>(0);
   cartProductDetails = new BehaviorSubject<any>("");
