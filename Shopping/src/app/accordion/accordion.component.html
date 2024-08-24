@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
     <div class="accordion ">
         <div *ngFor="let category of catogories; let i=index" class="accordion-item">
-            <div (click)="toggle(category)" class="accordion-header row pb-1 ">
+            <div (click)="toggle(category)" class="accordion-header row col-12">
                 <i *ngIf="!category.showSubCategories" class="fa fa-plus-square-o col-1 my-auto"></i>
                 <i *ngIf="category.showSubCategories" class="fa fa-minus-square-o col-1 my-auto"></i>
                 <div class="accordion-title col-10 text-start"> {{category.title}}</div>
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-</div>
+<!-- </div> -->
 
 
 

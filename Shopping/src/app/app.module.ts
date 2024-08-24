@@ -8,6 +8,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { provideHttpClient } from '@angular/common/http';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { CurrencyPipe } from '@angular/common';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [provideHttpClient()],
+  providers: [provideHttpClient(),CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

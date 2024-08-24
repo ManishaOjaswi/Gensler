@@ -1,5 +1,5 @@
 .accordion-title {
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     font-weight: 500;
 }
 
@@ -18,7 +18,14 @@
 }
 
 .accordion-item {
-    padding: 2vw;
+    padding: 1vw;
+}
+
+.accordion-subCategory:hover{
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(34, 84, 159);;
+
 }
 
 
