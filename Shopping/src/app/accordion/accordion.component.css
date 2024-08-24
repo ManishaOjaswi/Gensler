@@ -1,41 +1,39 @@
-
-
-.accordion-header{
-    font-size: 1.2rem ;
+.accordion-title {
+    font-size: 1.8vw;
     font-weight: 500;
 }
 
-
-
-
-/* 
-.container{
-    width: 20vw ;
-    height: 80vh;    
-    background-color: rgb(218, 196, 255);
+.accordion-subCategory {
+    font-size: 1vw;
 }
 
-.accordion-header{
-    display:flex;
-    border: 1px solid black;
-    padding-top: 5px;
-    padding-bottom: 5px;
+.subCategoryContainer {
+    padding-left: 2vw;
 }
 
-i{
-    padding: 8px;
-    font-size: 1.5rem ;
+.fa {
+    font-size: 1vw;
+    padding: 0;
+    padding-left: 1vw;
 }
 
-.accordion-title{
-    padding: 8px;
-    flex-grow: 2;
-    font-size: 1.5rem;
+.accordion-item {
+    padding: 2vw;
 }
 
-.accordion-body{
-    font-size: 1rem;
-    padding:10px;
-    padding-left:50px;
+
+
+@media only screen and (max-width: 600px) {
+    .accordion-item {
+        padding: 1vw;
+    }
+    .fa {
+        font-size: 1.2vw;
+        padding-left: 2vw;
+    }
+
+    [class*="col-10"] {
+        width: 80%;
+    }
+
 }
- */
