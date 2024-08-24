@@ -12,10 +12,12 @@ export class ProductCardComponent implements OnInit {
   subCategoryItemList: any;
   selectedItemList: any;
   selectedSubCategory: string = "Computer";
+  loaderFlag:boolean = false;
   constructor(private dataService: SelectedDataService, private http: HttpClient
   ) { }
 
   ngOnInit(): void {
+    this.loaderFlag= true;
     this.dataService.getSelecteddCategory().subscribe(res => {  // fetching the state and sub category user has selected
       this.selectedSubCategory = res;
       // making a api call to get products reated to the sub category user has selected
@@ -23,7 +25,8 @@ export class ProductCardComponent implements OnInit {
         .subscribe((res: any) => {
           this.subCategoryItemList = res;
           this.displayItems(this.subCategoryItemList); // once the api data is fetched we are displaying all the products
-        });
+          this.loaderFlag=false;
+        })
     })
   }
 
