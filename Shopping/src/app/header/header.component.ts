@@ -18,7 +18,4 @@ constructor(private dataService:SelectedDataService){}
   }
  
 
-
-
-
 }

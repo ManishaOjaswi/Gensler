@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent implements OnInit {
-  subCategoryItemList:any;
-  selectedItemList:any;
+  subCategoryItemList: any;
+  selectedItemList: any;
   selectedSubCategory: string = "Computer";
-  constructor(private dataService: SelectedDataService,private http: HttpClient
+  constructor(private dataService: SelectedDataService, private http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -20,22 +20,21 @@ export class ProductCardComponent implements OnInit {
       this.selectedSubCategory = res;
 
       this.http.get("https://gensler-project-default-rtdb.firebaseio.com/subCategoryList.json")
-      .subscribe((res: any) => {
-        this.subCategoryItemList = res;
-        this.displayItems(this.subCategoryItemList);
-      });
+        .subscribe((res: any) => {
+          this.subCategoryItemList = res;
+          this.displayItems(this.subCategoryItemList);
+        });
     })
   }
 
-  displayItems(itemList:any){
-    let selItemList = itemList.filter((value:any)=>{
+  displayItems(itemList: any) {
+    let selItemList = itemList.filter((value: any) => {
       return value.subCategory == this.selectedSubCategory;
     })
-    this.selectedItemList  = selItemList[0];
+    this.selectedItemList = selItemList[0];
   }
 
-  addToCart(product:any){
-    console.log("product==",product);
+  addToCart(product: any) {
     this.dataService.addProductToCart(product);
   }
 

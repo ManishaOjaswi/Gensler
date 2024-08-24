@@ -1,54 +1,55 @@
-.card-img-top{
+.card-img-top {
     width: 100%;
     height: 15vw;
     background-color: blanchedalmond;
 }
 
-.card-title{
+.card-title {
     font-size: 1.5vw;
     font-weight: 500;
 }
-.card-price{
+
+.card-price {
     font-size: 1vw;
 }
 
-.card{
-    margin:2vw; 
-    padding:1vw;
+.card {
+    margin: 2vw;
+    padding: 1vw;
 }
 
-.btn{
+.btn {
     font-size: 1vw;
 }
 
 /* Extra small devices */
-@media only screen and (max-width: 600px ) { 
-    
-     [class*="col-"] {
+@media only screen and (max-width: 600px) {
+
+    [class*="col-"] {
         width: 30%;
-      }
-      .btn{
-        padding: 2px 3px;     
-         
     }
-    .card-body{
+
+    .btn {
+        padding: 2px 3px;
+
+    }
+
+    .card-body {
         padding: 0;
     }
-      
+
 }
 
 /* Small devices */
-@media only screen and (min-width: 600px) { 
-     [class*="col-"] {
-        width: 25%;
-     }     
-     
-}
-
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 600px) {
     [class*="col-"] {
-       width: 27%;
-    }     
+        width: 25%;
+    }
+
 }
 
-
+@media only screen and (min-width: 768px) {
+    [class*="col-"] {
+        width: 27%;
+    }
+}
