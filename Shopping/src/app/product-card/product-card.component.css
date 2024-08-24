@@ -22,6 +22,10 @@
     font-size: 1vw;
 }
 
+.card:hover{
+    box-shadow: 2px 2px 4px;
+}
+
 /* Extra small devices */
 @media only screen and (max-width: 600px) {
 

@@ -16,11 +16,12 @@ export class ProductCardComponent implements OnInit {
   constructor(private dataService: SelectedDataService, private http: HttpClient
   ) { }
 
-  ngOnInit(): void {
-    this.loaderFlag= true;
+  ngOnInit(): void {   
     this.dataService.getSelecteddCategory().subscribe(res => {  // fetching the state and sub category user has selected
       this.selectedSubCategory = res;
       // making a api call to get products reated to the sub category user has selected
+      this.loaderFlag= true;
+      this.selectedItemList =[];
       this.http.get("https://gensler-project-default-rtdb.firebaseio.com/subCategoryList.json")
         .subscribe((res: any) => {
           this.subCategoryItemList = res;
