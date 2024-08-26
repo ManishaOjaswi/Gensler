@@ -36,7 +36,7 @@
     }
     .fa {
         font-size: 1.2vw;
-        padding-left: 2vw;
+        padding-left: 3vw;
     }
 
     [class*="col-10"] {
@@ -44,3 +44,10 @@
     }
 
 }
+
+@media only screen and (min-width: 600px ) and (max-width: 768px ) { 
+    .fa {
+        font-size: 1.2vw;
+        padding-left: 2vw;
+    } 
+  }
