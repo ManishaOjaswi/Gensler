@@ -13,7 +13,7 @@
             <div class="card-price pb-1">
                 Price: {{item.price | currency:'INR'}}
             </div>
-            <button type="button" (click)="addToCart(item)" class="btn btn-primary text-start">Add to Cart</button>
+            <button type="button" (click)="addToCart($event,item)" class="btn btn-primary text-start">Add to Cart</button>
         </div>
     </div>
 </div>

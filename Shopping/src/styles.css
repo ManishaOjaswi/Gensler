@@ -10,3 +10,7 @@
     background-color: rgb(34, 84, 159);
 }
 
+.btn:disabled{
+    background-color: rgb(208, 208, 208);
+}
+

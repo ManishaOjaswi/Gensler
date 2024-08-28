@@ -38,8 +38,9 @@ export class ProductCardComponent implements OnInit {
     this.selectedItemList = selItemList[0];
   }
 
-  addToCart(product: any) {
+  addToCart(event:any,product: any) {
     this.dataService.addProductToCart(product);
+    event.target.disabled = true;
   }
 
 }
